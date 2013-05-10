@@ -29,7 +29,7 @@
 }
 
 - (IBAction)login {
-    _uzhname.text=[IBApi_member loginwithUsername:_uname.text Password:_upass.text];
+    _uzhname.text=[[IBApi_member loginwithUsername:_uname.text Password:_upass.text]objectForKey:@"username"];
    
 }
 - (void)dealloc {

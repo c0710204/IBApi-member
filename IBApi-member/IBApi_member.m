@@ -20,7 +20,7 @@
     }
     return self;
 }
-+(NSString*) loginwithUsername:(NSString*)username Password:(NSString*)password
++(NSDictionary*) loginwithUsername:(NSString*)username Password:(NSString*)password
 {
     NSMutableURLRequest *ur=[[[NSMutableURLRequest alloc]initWithURL:[NSURL URLWithString:@"http://api.bistu.edu.cn/api/api.php?table=member&action=getloginkey_ios_der"]]retain];
     
@@ -52,6 +52,6 @@
     //printf("s5\n");
     NSDictionary *data2=[[NSJSONSerialization JSONObjectWithData:da options:kNilOptions error:nil]retain];
     NSLog(@"res1=%@",[data2 objectForKey:@"username"]);
-    return [data2 objectForKey:@"username"];
+    return [[data2 copy]autorelease];
 }
 @end

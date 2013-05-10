@@ -49,6 +49,7 @@
 		18F1B5F0173D67DE007D8E33 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
 		18F1B5F1173D67DE007D8E33 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
 		18F1B64F173D7C03007D8E33 /* IBApi-member-test.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "IBApi-member-test.xcodeproj"; path = "IBApi-member-test/IBApi-member-test.xcodeproj"; sourceTree = "<group>"; };
+		18F1B65B173D8E85007D8E33 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +67,7 @@
 		18F1B5D3173D67A9007D8E33 = {
 			isa = PBXGroup;
 			children = (
+				18F1B65B173D8E85007D8E33 /* README */,
 				18F1B64F173D7C03007D8E33 /* IBApi-member-test.xcodeproj */,
 				18F1B5E1173D67A9007D8E33 /* IBApi-member */,
 				18F1B5DE173D67A9007D8E33 /* Frameworks */,

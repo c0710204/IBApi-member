@@ -13,5 +13,5 @@
     NSString *public_key_der_base64;
 }
 
-+(NSString*) loginwithUsername:(NSString*)username Password:(NSString*)password;
++(NSDictionary*) loginwithUsername:(NSString*)username Password:(NSString*)password;
 @end

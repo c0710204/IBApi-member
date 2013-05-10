@@ -10,7 +10,19 @@
 		18F1B5E0173D67A9007D8E33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F1B5DF173D67A9007D8E33 /* Foundation.framework */; };
 		18F1B5E5173D67A9007D8E33 /* IBApi_member.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 18F1B5E4173D67A9007D8E33 /* IBApi_member.h */; };
 		18F1B5E7173D67A9007D8E33 /* IBApi_member.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F1B5E6173D67A9007D8E33 /* IBApi_member.m */; };
+		18F1B5F2173D67DE007D8E33 /* rsa.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F1B5EE173D67DE007D8E33 /* rsa.m */; };
+		18F1B5F3173D67DE007D8E33 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F1B5F0173D67DE007D8E33 /* GTMBase64.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		18F1B653173D7C05007D8E33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18F1B64F173D7C03007D8E33 /* IBApi-member-test.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 18F1B629173D7C02007D8E33;
+			remoteInfo = "IBApi-member-test";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		18F1B5DA173D67A9007D8E33 /* CopyFiles */ = {
@@ -31,6 +43,12 @@
 		18F1B5E3173D67A9007D8E33 /* IBApi-member-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IBApi-member-Prefix.pch"; sourceTree = "<group>"; };
 		18F1B5E4173D67A9007D8E33 /* IBApi_member.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IBApi_member.h; sourceTree = "<group>"; };
 		18F1B5E6173D67A9007D8E33 /* IBApi_member.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IBApi_member.m; sourceTree = "<group>"; };
+		18F1B5ED173D67DE007D8E33 /* rsa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rsa.h; sourceTree = "<group>"; };
+		18F1B5EE173D67DE007D8E33 /* rsa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rsa.m; sourceTree = "<group>"; };
+		18F1B5EF173D67DE007D8E33 /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
+		18F1B5F0173D67DE007D8E33 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
+		18F1B5F1173D67DE007D8E33 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		18F1B64F173D7C03007D8E33 /* IBApi-member-test.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "IBApi-member-test.xcodeproj"; path = "IBApi-member-test/IBApi-member-test.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +66,7 @@
 		18F1B5D3173D67A9007D8E33 = {
 			isa = PBXGroup;
 			children = (
+				18F1B64F173D7C03007D8E33 /* IBApi-member-test.xcodeproj */,
 				18F1B5E1173D67A9007D8E33 /* IBApi-member */,
 				18F1B5DE173D67A9007D8E33 /* Frameworks */,
 				18F1B5DD173D67A9007D8E33 /* Products */,
@@ -73,6 +92,11 @@
 		18F1B5E1173D67A9007D8E33 /* IBApi-member */ = {
 			isa = PBXGroup;
 			children = (
+				18F1B5ED173D67DE007D8E33 /* rsa.h */,
+				18F1B5EE173D67DE007D8E33 /* rsa.m */,
+				18F1B5EF173D67DE007D8E33 /* GTMBase64.h */,
+				18F1B5F0173D67DE007D8E33 /* GTMBase64.m */,
+				18F1B5F1173D67DE007D8E33 /* GTMDefines.h */,
 				18F1B5E4173D67A9007D8E33 /* IBApi_member.h */,
 				18F1B5E6173D67A9007D8E33 /* IBApi_member.m */,
 				18F1B5E2173D67A9007D8E33 /* Supporting Files */,
@@ -86,6 +110,14 @@
 				18F1B5E3173D67A9007D8E33 /* IBApi-member-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18F1B650173D7C03007D8E33 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18F1B654173D7C05007D8E33 /* IBApi-member-test.app */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +159,12 @@
 			mainGroup = 18F1B5D3173D67A9007D8E33;
 			productRefGroup = 18F1B5DD173D67A9007D8E33 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 18F1B650173D7C03007D8E33 /* Products */;
+					ProjectRef = 18F1B64F173D7C03007D8E33 /* IBApi-member-test.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				18F1B5DB173D67A9007D8E33 /* IBApi-member */,
@@ -134,12 +172,24 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		18F1B654173D7C05007D8E33 /* IBApi-member-test.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "IBApi-member-test.app";
+			remoteRef = 18F1B653173D7C05007D8E33 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXSourcesBuildPhase section */
 		18F1B5D8173D67A9007D8E33 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				18F1B5E7173D67A9007D8E33 /* IBApi_member.m in Sources */,
+				18F1B5F2173D67DE007D8E33 /* rsa.m in Sources */,
+				18F1B5F3173D67DE007D8E33 /* GTMBase64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "rsa.h"
 @interface IBApi_member : NSObject
+{
+    NSString *public_key_der_base64;
+}
 
++(NSString*) loginwithUsername:(NSString*)username Password:(NSString*)password;
 @end

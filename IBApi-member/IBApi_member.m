@@ -20,9 +20,25 @@
     }
     return self;
 }
-+(NSDictionary*) loginwithUsername:(NSString*)username Password:(NSString*)password
++(NSDictionary*) loginwithUsername:(NSString*)username Password:(NSString*)password forapp:(IBApp*)app;
 {
-    NSMutableURLRequest *ur=[[[NSMutableURLRequest alloc]initWithURL:[NSURL URLWithString:@"http://api.bistu.edu.cn/api/api.php?table=member&action=getloginkey_ios_der"]]retain];
+    return [self loginwithUsername:username
+                          Password:password
+                            forurlgetkey:[app urlbuilderwithtable:@"member"
+                                                           action:@"getloginkey_ios_der"
+                                          ]
+                          urllogin:[app urlbuilderwithtable:@"member"
+                                                     action:@"login_ios"
+                                                      query: @"&info=%@"
+                                    ]
+            
+            ];
+}
+
+
++(NSDictionary*) loginwithUsername:(NSString*)username Password:(NSString*)password forurlgetkey:(NSString*)url1 urllogin:(NSString*)url2
+{
+    NSMutableURLRequest *ur=[[[NSMutableURLRequest alloc]initWithURL:[NSURL URLWithString:url1]]retain];
     
     NSData *res=[[NSURLConnection sendSynchronousRequest:ur returningResponse:nil error:nil]retain];
     NSString *_response=[[[NSString alloc]initWithData:res encoding:NSUTF8StringEncoding]retain];
@@ -40,7 +56,7 @@
     NSLog(@"enstr=%@",enstr);
     ur=[[[NSMutableURLRequest alloc]initWithURL:
          [NSURL URLWithString:
-          [NSString stringWithFormat:@"http://api.bistu.edu.cn/api/api.php?table=member&action=login_ios&info=%@",enstr]
+          [NSString stringWithFormat:url2,enstr]
           ]
          ]
         retain
@@ -55,3 +71,4 @@
     return [[data2 copy]autorelease];
 }
 @end
+

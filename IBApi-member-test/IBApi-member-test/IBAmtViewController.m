@@ -33,7 +33,7 @@
                    [IBApi_member loginwithUsername:_uname.text
                                           Password:_upass.text
                                             forurlgetkey:@"http://api.bistu.edu.cn/api/api.php?table=member&action=getloginkey_ios_der"
-                                          urllogin: @"http://api.bistu.edu.cn/api/api.php?table=member&action=login_ios&info=%@"
+                                          urllogin: @"http://api.bistu.edu.cn/api/api.php?table=member&action=login_ios&info=%@&mode=1"
                     ]objectForKey:@"username"];
   
 }

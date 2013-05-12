@@ -46,14 +46,14 @@
     NSData *da=[[_response dataUsingEncoding:NSUTF8StringEncoding]retain];
     
     NSArray *data=[[NSJSONSerialization JSONObjectWithData:da options:kNilOptions error:nil]retain];
-    NSLog(@"res1=%@",[data objectAtIndex:0]);
+    //NSLog(@"res1=%@",[data objectAtIndex:0]);
     
     sec *s=[[[sec alloc]init]retain];
     
-    NSString *enstr=[[[s rsaEncryptString:[NSString stringWithFormat:@"%@|%@" ,username,password] withpublickey:[data objectAtIndex:0]]copy]autorelease];
+    NSString *enstr=[[[s rsaEncryptString:[NSString stringWithFormat:@"%@|%@|%.0f" ,username,password,[[NSDate date]timeIntervalSince1970]] withpublickey:[data objectAtIndex:0]]copy]autorelease];
     enstr=[[enstr stringByReplacingOccurrencesOfString: @"+"withString:@"*"]retain];
     
-    NSLog(@"enstr=%@",enstr);
+    //NSLog(@"enstr=%@",enstr);
     ur=[[[NSMutableURLRequest alloc]initWithURL:
          [NSURL URLWithString:
           [NSString stringWithFormat:url2,enstr]
@@ -63,11 +63,11 @@
         ];
     res=[[NSURLConnection sendSynchronousRequest:ur returningResponse:nil error:nil]retain];
     _response=[[[NSString alloc]initWithData:res encoding:NSUTF8StringEncoding]retain];
-    NSLog(@"res=%@\n",_response);
+    //NSLog(@"res=%@\n",_response);
     da=[[_response dataUsingEncoding:NSUTF8StringEncoding]retain];
     //printf("s5\n");
     NSDictionary *data2=[[NSJSONSerialization JSONObjectWithData:da options:kNilOptions error:nil]retain];
-    NSLog(@"res1=%@",[data2 objectForKey:@"username"]);
+    //NSLog(@"res1=%@",[data2 objectForKey:@"username"]);
     return [[data2 copy]autorelease];
 }
 @end

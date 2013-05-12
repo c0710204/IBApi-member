@@ -292,6 +292,7 @@
 				18F1B5EC173D67A9007D8E33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
